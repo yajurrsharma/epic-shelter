@@ -11,7 +11,6 @@
 
 - **Content-Addressed Deduplication:** Breaks files down into content-defined chunks (FastCDC) to eliminate duplicate storage across multiple snapshots.
 - **Smart Zstandard Compression:** Automatically compresses data chunks using `zstd` level 1 for optimal speed and space saving.
-- **Parallel Batch Storage:** Utilizes multi-threaded workers for fast multi-core write operations.
 - **ACID Metadata & Auto-Replication:** Uses SQLite WAL mode to log snapshots, automatically replicating metadata back to system user configuration directories (`~/.config/shelter/backups/`).
 - **Cross-Platform Vault Concealment:** Automatically creates and hides `.shelter` storage repositories across Linux, macOS, and Windows.
 
