@@ -34,7 +34,7 @@ Launch the interactive CLI shell from anywhere in your terminal:
 
     shelter
 OR
-``` python -m shelter ```
+```bash python -m shelter ```
 
 ### Commands
 
