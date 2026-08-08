@@ -39,18 +39,18 @@ Launch the interactive CLI shell from anywhere in your terminal:
 
 Inside the `shelter` interactive shell:
 
-- `backup <directory_or_file>` — Scan and create a deduplicated snapshot.
-- `restore <snapshot_id> [output_path]` — Reconstruct a full snapshot back to disk.
-- `list` / `history` — Display stored manifests and snapshot IDs.
-- `config` — View or update engine settings.
-- `exit` — Exit the shell.
+- `manual` / `m` — Run in manual mode.
+- `auto` / `automatic` / `a` — Run in automatic mode.
+- `status` / `info` — Display vault status and path details.
+- `help` / `?` — Show the help menu.
+- `exit` / `quit` / `q` — Exit the shell.
 
 ---
 
 ## Architecture Overview
 
 1. **Chunker (`chunker.py`):** Uses FastCDC gear-hash scanning with rolling window buffers and `xxhash` to split streams into content-defined chunks.
-2. **Vault (`vault.py`):** Manages SQLite WAL transactions for reference counting, snapshot manifests, and physical file storage in content-addressed directory trees.
+2. **Vault (`vault.py`):** Manages SQLite transactions for reference counting, snapshot manifests, and physical file storage in content-addressed directory trees.
 3. **Engine (`engine.py`):** Orchestrates multi-threaded file traversal, chunking pipelines, and snapshot reconstruction.
 
 ---
