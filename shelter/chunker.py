@@ -1,7 +1,7 @@
 import os
 import xxhash
 from typing import Generator
-from shelter.models import Chunk
+from models import Chunk
 
 MIN_CHUNK_SIZE = 512 * 1024 # 512 KN
 TARGET_CHUNK_SIZE = 2 * 1024 * 1024 # 2MB
