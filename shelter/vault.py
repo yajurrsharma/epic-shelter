@@ -5,7 +5,7 @@ import sqlite3
 import zstandard as zstd
 from typing import List, Optional, Tuple
 from concurrent.futures import ThreadPoolExecutor
-from shelter.models import Chunk, Manifest
+from models import Chunk, Manifest
 
 
 
