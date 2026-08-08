@@ -1,6 +1,6 @@
 # EpicShelter
 
-> **Content-Addressed Storage Engine**
+> **Content-Addressed Storage Engine** <br>
 > Created by Yajur Sharma — © EpicShelter 2026
 
 `EpicShelter` is a lightweight, high-performance CLI backup engine built on FastCDC variable-size chunking, content-addressed storage (CAS), and SQLite metadata tracking with automatic Zstandard compression.
