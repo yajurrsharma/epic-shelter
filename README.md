@@ -33,6 +33,8 @@ Or install the development version from GitHub:
 Launch the interactive CLI shell from anywhere in your terminal:
 
     shelter
+OR
+``` python -m shelter ```
 
 ### Commands
 
