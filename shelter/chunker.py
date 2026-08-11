@@ -77,7 +77,6 @@ def stream_chunks(file_path: str) -> Generator[Chunk, None, None]:
             chunk_bytes = bytes(buffer[:cut_point])
             del buffer[:cut_point]
 
-            # High-speed xxhash calculation
             chunk_hash = xxhash.xxh3_64_hexdigest(chunk_bytes)
 
             yield Chunk(
