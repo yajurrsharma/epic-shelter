@@ -1,16 +1,13 @@
 # EpicShelter
 
-> **Content-Addressed Storage Engine** <br>
-> Created by Yajur Sharma — © EpicShelter 2026
-
-`EpicShelter` is a lightweight, high-performance CLI backup engine built on FastCDC variable-size chunking, content-addressed storage (CAS), and SQLite metadata tracking with automatic Zstandard compression.
+EpicShelter is a lightweight, high-performance CLI backup engine built on FastCDC variable-size chunking, content-addressed storage, and SQLite metadata tracking with Zstandard compression.
 
 ---
 
 ## Key Features
 
-- **Content-Addressed Deduplication:** Breaks files down into content-defined chunks (FastCDC) to eliminate duplicate storage across multiple snapshots.
-- **Smart Zstandard Compression:** Automatically compresses data chunks using `zstd` level 1 for optimal speed and space saving.
+- **Content-Addressed Deduplication:** Breaks files down into content-defined chunks to eliminate duplicate storage across multiple snapshots.
+- **Zstandard Compression:** Automatically compresses data chunks using `zstd` level 1 for optimal speed and space saving.
 - **ACID Metadata & Auto-Replication:** Uses SQLite WAL mode to log snapshots, automatically replicating metadata back to system user configuration directories (`~/.config/shelter/backups/`).
 - **Cross-Platform Vault Concealment:** Automatically creates and hides `.shelter` storage repositories across Linux, macOS, and Windows.
 
@@ -57,6 +54,10 @@ Inside the `shelter` interactive shell:
 3. **Engine (`engine.py`):** Orchestrates multi-threaded file traversal, chunking pipelines, and snapshot reconstruction.
 
 ---
+
+# Availability
+
+This project is completely open-source and open to changes.
 
 ## License
 
