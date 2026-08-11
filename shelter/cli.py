@@ -253,7 +253,6 @@ def run_manual_mode(engine: BackupEngine):
 
             print(f"\n{GREEN}[✓] Restore Process Completed! ({successful} success, {failed} failed){RESET}")
             
-            # Burn consumed token on successful restore and print new one ONCE
             regenerate_and_display_new_otp(engine.vault)
 
         elif cmd in ("help", "?"):
