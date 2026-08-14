@@ -49,7 +49,7 @@ Inside the `shelter` interactive shell:
 
 ## Architecture Overview
 
-1. **Chunker (`chunker.py`):** Uses FastCDC gear-hash scanning with rolling window buffers and `xxhash` to split streams into content-defined chunks.
+1. **Chunker (`chunker.py`):** Uses gear-hash scanning with rolling window buffers and `xxhash` to split streams into content-defined chunks.
 2. **Vault (`vault.py`):** Manages SQLite transactions for reference counting, snapshot manifests, and physical file storage in content-addressed directory trees.
 3. **Engine (`engine.py`):** Orchestrates multi-threaded file traversal, chunking pipelines, and snapshot reconstruction.
 
