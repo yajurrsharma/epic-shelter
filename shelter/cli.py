@@ -45,7 +45,7 @@ IS_NEWLY_GENERATED = False
 
 
 def format_elapsed_time(seconds: float) -> str:
-    """Formats raw seconds into readable time (e.g., '1.24s' or '4.2ms')."""
+    """Formats raw seconds into readable time"""
     if seconds < 0.01:
         return f"{seconds * 1000:.1f}ms"
     return f"{seconds:.2f}s"
@@ -53,7 +53,7 @@ def format_elapsed_time(seconds: float) -> str:
 
 def load_or_create_otp(vault: Vault):
     """
-    Loads persistent OTP. If no OTP exists, creates one and flags it as newly generated.
+    Loads persistent OTP, if no OTP exists, creates one and flags it as newly generated
     """
     global CURRENT_OTP, IS_NEWLY_GENERATED
     existing_otp = vault.get_config("otp")
@@ -71,7 +71,7 @@ def load_or_create_otp(vault: Vault):
 
 def regenerate_and_display_new_otp(vault: Vault) -> str:
     """
-    Burns current OTP, generates a fresh one, and prints single-time display warning.
+    Burns current OTP, generates a fresh one, and prints single-time display warning
     """
     global CURRENT_OTP, IS_NEWLY_GENERATED
     CURRENT_OTP = secrets.token_hex(3).upper()
@@ -115,7 +115,7 @@ def print_help():
 
 def run_manual_mode(engine: BackupEngine):
     """
-    Interactive text-driven manual mode for single file operations.
+    Interactive text driven manual mode for single file operations
     """
     global CURRENT_OTP
 
@@ -266,7 +266,7 @@ def run_manual_mode(engine: BackupEngine):
 
 def run_automatic_mode(engine: BackupEngine):
     """
-    Automatic mode: Scans a folder recursively and backs up all contained files.
+    Automatic mode: Scans a folder recursively and backs up all contained files
     """
     print(f"\n{BOLD}[ AUTOMATIC MODE - DIRECTORY BACKUP ]{RESET}")
     try:
