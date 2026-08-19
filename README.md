@@ -4,33 +4,35 @@ EpicShelter is a lightweight, high performance CLI backup engine built on variab
 
 ---
 
-## Key Features
+## Features
 
 - **Content-Addressed Deduplication:** Breaks files down into content-defined chunks to eliminate duplicate storage across multiple snapshots.
 - **Zstandard Compression:** Automatically compresses data chunks using `zstd` level 1 for optimal speed and space saving.
 - **ACID Metadata & Auto-Replication:** Uses SQLite WAL mode to log snapshots, automatically replicating metadata back to system user configuration directories (`~/.config/shelter/backups/`).
-- **Cross-Platform Vault Concealment:** Automatically creates and hides `.shelter` storage repositories across Linux, macOS, and Windows.
+- **Cross Platform Vault Concealment:** Automatically creates and hides `.shelter`, which is the main `.db` storage system, across Linux, macOS, and Windows.
 
 ---
 
 ## Installation
 
 Install the latest version directly from PyPI:
-
+```bash
     pip install epic-shelter
-
+```
 Or install the development version from GitHub:
-
+```bash
     pip install git+https://github.com/yajurrsharma/epic-shelter.git
-
+```
 ---
 
 ## Usage
 
 Launch the interactive CLI shell from anywhere in your terminal:
-
+```bash
     shelter
+```
 OR
+
 ```bash
 python3 -m shelter
 ```
@@ -44,15 +46,6 @@ Inside the `shelter` interactive shell:
 - `status` / `info` — Display vault status and path details.
 - `help` / `?` — Show the help menu.
 - `exit` / `quit` / `q` — Exit the shell.
-
----
-
-## Architecture Overview
-
-1. **Chunker (`chunker.py`):** Uses gear-hash scanning with rolling window buffers and `xxhash` to split streams into content-defined chunks.
-2. **Vault (`vault.py`):** Manages SQLite transactions for reference counting, snapshot manifests, and physical file storage in content-addressed directory trees.
-3. **Engine (`engine.py`):** Orchestrates multi-threaded file traversal, chunking pipelines, and snapshot reconstruction.
-
 ---
 
 # Availability
