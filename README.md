@@ -17,11 +17,11 @@ EpicShelter is a lightweight, high performance CLI backup engine built on variab
 
 Install the latest version directly from PyPI:
 ```bash
-    pip install epic-shelter
+pip install epic-shelter
 ```
 Or install the development version from GitHub:
 ```bash
-    pip install git+https://github.com/yajurrsharma/epic-shelter.git
+pip install git+https://github.com/yajurrsharma/epic-shelter.git
 ```
 ---
 
@@ -29,7 +29,7 @@ Or install the development version from GitHub:
 
 Launch the interactive CLI shell from anywhere in your terminal:
 ```bash
-    shelter
+shelter
 ```
 OR
 
