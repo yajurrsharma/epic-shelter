@@ -1,6 +1,6 @@
 # EpicShelter
 
-EpicShelter is a lightweight, high performance CLI backup engine built on variable-size chunking, content-addressed storage, and SQLite metadata tracking with Zstandard compression.
+EpicShelter is a lightweight, high performance CLI backup engine built on variable-size chunking, content-addressed storage, and SQLite metadata tracking with compression.
 
 ---
 
